@@ -8,8 +8,13 @@ export async function loginStatus() {
   return await request("/api/v1/logged_in");
 }
 
-export async function logOutUser() {
-  return await request("/api/v1/logout", "DELETE");
+export async function logOutUser(token) {
+  return await request(
+    "/api/v1/logout",
+    "DELETE",
+    {},
+    { Authorization: `Bearer ${token}` }
+  );
 }
 
 export async function logIn(credentials) {

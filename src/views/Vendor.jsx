@@ -7,10 +7,14 @@ const Vendor = (props) => {
   const goToSignUP = () => {
     props.navigation.navigate("Sign Up");
   };
+
+  const goToLogIn = () => {
+    props.navigation.navigate("Log In");
+  };
   return (
     <SafeAreaView style={styles.view}>
       <View style={styles.container}>
-        <TouchableOpacity style={styles.logInButton}>
+        <TouchableOpacity style={styles.logInButton} onPress={goToLogIn}>
           <Text style={styles.logInButton.text}>LOG IN</Text>
         </TouchableOpacity>
         <View style={styles.signUpInfo}>

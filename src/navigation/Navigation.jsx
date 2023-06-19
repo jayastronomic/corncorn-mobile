@@ -8,6 +8,7 @@ import { Feather } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 import SignUp from "../views/SignUp";
+import Login from "../views/LogIn";
 
 const Stack = createStackNavigator();
 
@@ -24,6 +25,9 @@ const VendorStack = () => {
         }}
       >
         {(props) => <SignUp {...props} />}
+      </Stack.Screen>
+      <Stack.Screen name="Log In">
+        {(props) => <Login {...props} />}
       </Stack.Screen>
     </Stack.Navigator>
   );
